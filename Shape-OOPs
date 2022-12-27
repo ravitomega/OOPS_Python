@@ -1,0 +1,37 @@
+class  Shape:
+	def  __init__(self): print("Shape Constructor")
+	def  area(self): print("Area of shape")
+	
+
+class  Circle(Shape):
+	def  __init__(self, r):
+		Shape.__init__(self)
+		self.radius = r
+		print("Circle Constructor")
+	def  area(self):
+		print("Area of circle is:", 3.142*self.radius*self.radius)
+
+class  Square(Shape):
+	def  __init__(self, s):
+		Shape.__init__(self)
+		self.side = s
+		print("Square Constructor")
+	def  area(self):
+		print("Area of square is:", self.side*self.side)
+
+class  Triangle(Shape):
+	def  __init__(self, b, h):
+		Shape.__init__(self)
+		self.base = b; self.height = h
+		print("Triangle Constructor")
+	def  area(self):
+		print("Area of triangle is:", 0.5*self.base*self.height)
+ 
+c = Circle(20)
+c.area()
+
+s = Square(20)
+s.area()
+
+t = Triangle(10, 15)
+t.area()
